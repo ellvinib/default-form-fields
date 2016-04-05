@@ -88,7 +88,7 @@ module.exports = function (grunt) {
         },
         cwd: 'src',
         src: 'templates/**.html',
-        dest: '<%= yeoman.dist %>/scripts/files/templates.js'
+        dest: '<%= yeoman.dist %>/scripts/templates.js'
       }
     },
     bump: {
@@ -237,7 +237,7 @@ module.exports = function (grunt) {
             cwd: '<%= yeoman.app %>/',
             dest: '<%= yeoman.dist %>/scripts',
             src: [
-              'main.js'
+              'main.js','templates.js'
             ]
           }
         ]
@@ -367,9 +367,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean',
-    'ngtemplates',
     'replace',
     'copy:dist',
+    'ngtemplates',
     'concat',
     'uglify:dist',
     'concurrent:dist',
