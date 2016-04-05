@@ -11,8 +11,9 @@
             return {
                 name: "tinkText",
                 templateUrl: 'templates/tinkText.html',
-                wrapper:['frField'],
-                viewWrapper:['frViewField']
+                wrapper:['tinkFieldWrapper'],
+                viewWrapper:['frViewField'],
+                optionTemplate:'templates/options/tinkText.html'
             };
         }
     ]);
@@ -92,7 +93,7 @@
 
 
   $templateCache.put('templates/tinkWrapper.html',
-    "<div class=form-group> <label data-ng-show=\"field.to.label.length > 0 && field.to.displayLabel\" data-ng-class=\"{required: field.validation.required != undefined && field.validation.required}\" for=\"{{ field.attrs.id }}\">{{field.to.label}}</label> <span class=fr-toggle-extraInfo data-ng-if=\"field.to.extraInfo.length > 0\"> <a data-ng-click=\"options.state.extraInfoCollapsed = !options.state.extraInfoCollapsed\"> {{ options.state.extraInfoCollapsed ? 'Hulp nodig?' : 'Sluiten' }} </a> </span> <fr-transclude></fr-transclude> <span class=help-block>A block of help text that breaks onto a new line and may extend beyond one line. Tip: use <code>.help-block</code>.</span> </div> <div fr-messages=field.validation.error></div> <small data-ng-show=\"field.to.shortDescription.length > 0 && field.state.editMode\" data-ng-bind=field.to.shortDescription></small> <div class=fr-extraInfo data-ng-show=\"field.to.extraInfo.length > 0 && !options.state.extraInfoCollapsed\" data-ng-bind-html=field.to.extraInfo></div>"
+    "<div class=form-group> <label data-ng-show=\"field.to.label.length > 0 && field.to.displayLabel\" data-ng-class=\"{required: field.validation.required != undefined && field.validation.required}\" for=\"{{ field.attrs.id }}\">{{field.to.label}}</label> <span class=fr-toggle-extraInfo data-ng-if=\"field.to.extraInfo.length > 0\"> <a data-ng-click=\"options.state.extraInfoCollapsed = !options.state.extraInfoCollapsed\"> {{ options.state.extraInfoCollapsed ? 'Hulp nodig?' : 'Sluiten' }} </a> </span> <fr-transclude></fr-transclude> <span class=help-block>{{field.spec.extraOptions.extraInfo}}</span> </div> <div fr-messages=field.validation.error></div> <small data-ng-show=\"field.to.shortDescription.length > 0 && field.state.editMode\" data-ng-bind=field.to.shortDescription></small> <div class=fr-extraInfo data-ng-show=\"field.to.extraInfo.length > 0 && !options.state.extraInfoCollapsed\" data-ng-bind-html=field.to.extraInfo></div>"
   );
 
 }]);

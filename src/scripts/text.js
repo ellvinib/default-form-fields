@@ -11,8 +11,9 @@
             return {
                 name: "tinkText",
                 templateUrl: 'templates/tinkText.html',
-                wrapper:['frField'],
-                viewWrapper:['frViewField']
+                wrapper:['tinkFieldWrapper'],
+                viewWrapper:['frViewField'],
+                optionTemplate:'templates/options/tinkText.html'
             };
         }
     ]);
