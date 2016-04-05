@@ -31,7 +31,7 @@
       return{
           getFields:function(){
               return [
-                  "defaultFieldTypes"
+                  "fieldTypeText"
               ]
           },
           getWrappers:function(){
