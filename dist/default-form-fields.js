@@ -26,7 +26,18 @@
   } catch (e) {
     module = ng.module('defaultFields', ['formRenderer.form']);
   }
-  module.run([
+  
+  module.service('defaultFields', [function() {
+      return{
+          get:function(){
+              return [
+                  "defaultFieldTypes"
+              ]
+          }
+      }
+  }])
+  
+ /*module.run([
       'frFieldConfig',
       'defaultFieldTypes',
       'defaultTinkWrappers',
@@ -34,7 +45,6 @@
           // initialize default form types and wrappers
           frFieldConfig.setType(defaultFieldTypes.get());
           frFieldConfig.setTempWrapper(defaultTinkWrappers.get());
-
       }
   ]);
     module.service('defaultFieldTypes', [
@@ -44,12 +54,7 @@
             var types = [];
             var thisArguments = arguments;
             
-             /**
-              * @function
-              * @name  initializeTypes ------------------------------
-              * @description - initialize default field types
-              * @return {Array} - all field types 
-              */
+           
             function initializeTypes() {
                 _.forEach(thisArguments, function(type, index) {
                     // first item === frFieldConfig
@@ -80,7 +85,7 @@
                     get: initializeWrappers
                 };
             }
-        ]);
+        ]);*/
 
 })(window.angular, window._);;angular.module('defaultFields').run(['$templateCache', function($templateCache) {
   'use strict';
