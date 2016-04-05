@@ -9,7 +9,7 @@
     module.service('fieldTypeText', [
         function frFieldTypeTextService() {
             return {
-                name: "text",
+                name: "textShort",
                 templateUrl: 'templates/text.html',
                 //wrapper:['frField'],
                 //viewWrapper:['frViewField']
