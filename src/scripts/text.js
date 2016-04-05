@@ -9,10 +9,10 @@
     module.service('fieldTypeText', [
         function frFieldTypeTextService() {
             return {
-                name: "textShort",
-                templateUrl: 'templates/text.html',
-                //wrapper:['frField'],
-                //viewWrapper:['frViewField']
+                name: "tinkText",
+                templateUrl: 'templates/tinkText.html',
+                wrapper:['frField'],
+                viewWrapper:['frViewField']
             };
         }
     ]);

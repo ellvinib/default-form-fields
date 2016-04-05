@@ -24,7 +24,7 @@ module.exports = function (grunt) {
     dist: 'dist',
     version: currentversion,
     module: require('./package.json').name,
-    domain: 'tink.skeleton'
+    domain: 'defaultFields'
   };
 
   // Define the configuration for all the tasks
@@ -88,7 +88,7 @@ module.exports = function (grunt) {
         },
         cwd: 'src',
         src: 'templates/**.html',
-        dest: '<%= yeoman.dist %>/scripts/templates.js'
+        dest: '<%= yeoman.dist %>/scripts/files/templates.js'
       }
     },
     bump: {
@@ -117,7 +117,7 @@ module.exports = function (grunt) {
       all: {
         src: [
           'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js'
+          '<%= yeoman.app %>/scripts/files{,*/}*.js'
         ]
       }
     },
@@ -226,9 +226,18 @@ module.exports = function (grunt) {
             expand: true,
             dot: true,
             cwd: '<%= yeoman.app %>/scripts/',
-            dest: '<%= yeoman.dist %>/scripts/',
+            dest: '<%= yeoman.dist %>/scripts/files/',
             src: [
               '{,*/}*'
+            ]
+          },
+          {
+            expand: true,
+            dot: true,
+            cwd: '<%= yeoman.app %>/',
+            dest: '<%= yeoman.dist %>/scripts',
+            src: [
+              'main.js'
             ]
           }
         ]

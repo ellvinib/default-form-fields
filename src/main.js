@@ -1,4 +1,5 @@
 (function(ng, _) {
+    'use strict';
   var module;
   try {
     module = ng.module('defaultFields');
@@ -8,16 +9,14 @@
   module.run([
       'frFieldConfig',
       'defaultFieldTypes',
-      function run(frFieldConfig, defaultFieldTypes) {
+      'defaultTinkWrappers',
+      function run(frFieldConfig, defaultFieldTypes,defaultTinkWrappers) {
           // initialize default form types and wrappers
           frFieldConfig.setType(defaultFieldTypes.get());
-          //frFieldConfig.setTempWrapper(frWrappers.get());
+          frFieldConfig.setTempWrapper(defaultTinkWrappers.get());
 
       }
   ]);
-
-
-    'use strict';
     module.service('defaultFieldTypes', [
         'fieldTypeText',
         function frFieldTypesService(fieldTypeText) {
@@ -45,4 +44,22 @@
             };
         }
     ]);
+        module.service('defaultTinkWrappers', [
+            function frWrappersService() {
+
+                function initializeWrappers() {
+                    return [
+                        {
+                            name: 'tinkFieldWrapper',
+                            templateUrl: 'templates/tinkWrapper.html',
+                        }
+                    ];
+                }
+
+                return {
+                    get: initializeWrappers
+                };
+            }
+        ]);
+
 })(window.angular, window._);
