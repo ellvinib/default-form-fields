@@ -1,9 +1,9 @@
 (function(ng, _) {
   var module;
   try {
-    module = angular.module('defaultFields');
+    module = ng.module('defaultFields');
   } catch (e) {
-    module = angular.module('defaultFields', ['formRenderer.form']);
+    module = ng.module('defaultFields', ['formRenderer.form']);
   }
   module.run([
       'frFieldConfig',
