@@ -10,6 +10,7 @@
         function frFieldTypeTextService() {
             return {
                 name: "tinkText",
+                label: 'Tink text',
                 templateUrl: 'templates/tinkText.html',
                 wrapper:['tinkFieldWrapper'],
                 viewWrapper:['frViewField'],
