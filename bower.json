@@ -1,0 +1,30 @@
+{
+  "name": "tink-skeleton-angular",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": [
+    "dist/default-form-fields.js"
+  ],
+  "ignore": [
+    ".*",
+    "**/.*",
+    "Gruntfile.js",
+    "package.json",
+    "src",
+    "test",
+    "*.sublime-project"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "angular-resource": "~1.4.9",
+    "angular-cookies": "~1.4.9",
+    "angular-sanitize": "~1.4.9",
+    "angular-animate": "~1.4.9",
+    "angular-touch": "~1.4.9",
+    "angular-route": "~1.4.9"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.9",
+    "angular-scenario": "~1.4.9"
+  }
+}
