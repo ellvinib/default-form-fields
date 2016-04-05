@@ -9,9 +9,17 @@
   
   module.service('defaultFields', [function() {
       return{
-          get:function(){
+          getFields:function(){
               return [
                   "defaultFieldTypes"
+              ]
+          },
+          getWrappers:function(){
+              return [
+                        {
+                            name: 'tinkFieldWrapper',
+                            templateUrl: 'templates/tinkWrapper.html',
+                        }
               ]
           }
       }
