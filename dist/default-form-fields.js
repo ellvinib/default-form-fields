@@ -10,7 +10,7 @@
         function addOptionsDirective() {
             return {
                 restrict:'E',
-                templateUrl:'addOptionsTemplate.html',
+                templateUrl:'templates/addOptionsTemplate.html',
                 require:'ngModel',
                 controllerAs:'ctrl',
                 scope:{
