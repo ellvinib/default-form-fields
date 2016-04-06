@@ -14,6 +14,15 @@
                 templateUrl: 'templates/tinkDropDown.html',
                 wrapper:['tinkFieldWrapper'],
                 viewWrapper:['frViewField'],
+                ngModel:[],
+                controller: function ($scope) {
+                    function initialize() {
+                        if (!$scope.field.state.editMode && _.isString($scope.ngModelInit)) {
+                            $scope.ngModelInit = [];
+                        }
+                    }
+                    initialize();
+                },
                 optionTemplate:'templates/options/tinkDropDown.html'
             };
         }
