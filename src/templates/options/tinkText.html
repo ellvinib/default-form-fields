@@ -1,32 +1,30 @@
-<form ng-if="ctrl.openItem.item">
     <!--<h5>Question</h5>-->
     <div class="form-group">
         <label for="question">Question</label>
-        <textarea ng-change="ctrl.rerender()"  ng-model-options="{ updateOn: 'blur' }"  id="question" ng-model="{{ field.field }}" placeholder="question" rows="2"></textarea>
+        <textarea ng-change="ctrl.rerender()"  ng-model-options="{ updateOn: 'blur' }"  id="question" ng-model="field.field" placeholder="question" rows="2"></textarea>
     </div>
     <!--<h5>Placeholder</h5>-->
     <div class="form-group">
         <label for="placeholder">placeholder</label>
-        <input ng-change="ctrl.rerender()"  ng-model-options="{ updateOn: 'blur' }" ng-model="{{ field.placeholder }}" type="text" id="placeholder">
+        <input ng-change="ctrl.rerender()"  ng-model-options="{ updateOn: 'blur' }" ng-model="field.placeholder" type="text" id="placeholder">
     </div>
     <!--<h5>Description</h5>-->
     <div class="form-group">
         <label for="description">Description</label>
-        <textarea ng-change="ctrl.rerender()"  ng-model-options="{ updateOn: 'blur' }"  ng-model="{{ field.shortDescription }}" id="description" placeholder="description" rows="2"></textarea>
+        <textarea ng-change="ctrl.rerender()"  ng-model-options="{ updateOn: 'blur' }"  ng-model="field.shortDescription" id="description" placeholder="description" rows="2"></textarea>
     </div>
     <!--<h5>Extra info</h5>-->
     <div class="form-group">
         <label for="extraInfo">Extra information</label>
-        <textarea ng-change="ctrl.rerender()"  ng-model-options="{ updateOn: 'blur' }" ng-model="{{ field.extraInfo }}" id="extraInfo" placeholder="extraInfo" rows="2"></textarea>
+        <textarea ng-change="ctrl.rerender()"  ng-model-options="{ updateOn: 'blur' }" ng-model=" field.extraInfo" id="extraInfo" placeholder="extraInfo" rows="2"></textarea>
     </div>
     <!--<h5>Requied</h5>-->
     <div class="checkbox">
-        <input ng-change="ctrl.rerender()"  ng-model-options="{ updateOn: 'blur' }" ng-model="{{ field.shortDescription }}" type="checkbox" id="Required" name="Required" value="" checked="">
+        <input ng-change="ctrl.rerender()"  ng-model-options="{ updateOn: 'blur' }" ng-model="field.shortDescription" type="checkbox" id="Required" name="Required" value="" checked="">
         <label for="Required">Required</label>
     </div>
     <!--<h5>Requied</h5>-->
     <div class="form-group">
-        <input ng-change="ctrl.rerender()"  ng-model-options="{ updateOn: 'blur' }" ng-model="{{ field.extraOptions.extraInfo }}" type="text" id="extra" name="extra">
+        <input ng-change="ctrl.rerender()"  ng-model-options="{ updateOn: 'blur' }" ng-model="field.extraOptions.extraInfo" type="text" id="extra" name="extra">
         <label for="extra">extra</label>
     </div>
-</form>
