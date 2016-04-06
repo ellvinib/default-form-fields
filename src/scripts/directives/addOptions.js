@@ -21,6 +21,9 @@
                 },
                 controller:["$scope",function($scope){
                    this.addOption= function(){
+                      /* if(!$scope.ngModel){
+                           $scope.ngModel = [];
+                       }*/
                       $scope.ngModel.push({key:'',label:''});
                    }   
                 }]

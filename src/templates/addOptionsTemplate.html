@@ -1,6 +1,6 @@
 <div class="form-group">
         <label for="Choises">Choises<i ng-click="ctrl.addOption()" class="fa fa-plus-square"></i></label>
-        <div class="row" ng-repeat="option in field.spec.extraOptions.options">
+        <div class="row" ng-repeat="option in ngModel">
             <div class="col-sm-5 col-md-5" class="form-group">
                 <label for="Key{{$index}}">Key</label>
                 <input ng-model-options="{ updateOn: 'blur' }" ng-model="option.key" type="text" id="Key{{$index}}">
