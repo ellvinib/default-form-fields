@@ -1,0 +1,17 @@
+<div class="form-group">
+        <label for="Choises">Choises<i ng-click="ctrl.addOption()" class="fa fa-plus-square"></i></label>
+        <div class="row" ng-repeat="option in field.spec.extraOptions.options">
+            <div class="col-sm-5 col-md-5" class="form-group">
+                <label for="Key{{$index}}">Key</label>
+                <input ng-model-options="{ updateOn: 'blur' }" ng-model="option.key" type="text" id="Key{{$index}}">
+            </div>
+            <div class="col-sm-5 col-md-5" class="form-group">
+                <label for="Label{{$index}}">Label</label>
+                <input ng-change="rerender()" ng-model-options="{ updateOn: 'blur' }" ng-model="option.label" type="text" id="Label{{$index}}">
+            </div>
+            <div class="col-sm-2 col-md-2" >
+                <i ng-click="ctrl.removeOption(option)" class="fa fa-minus-circle"></i>
+            </div>
+            
+        </div>
+    </div>

@@ -11,7 +11,8 @@
       return{
           getFields:function(){
               return [
-                  "fieldTypeText"
+                  "fieldTypeText",
+                  "tinkDropdownField"
               ]
           },
           getWrappers:function(){
