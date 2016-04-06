@@ -4,6 +4,7 @@
 </div>
 <div class="fr-field-state-write-wrapper" data-ng-show="field.state.editMode">
     <div data-ng-class="{'fr-field-input-group': field.to.unit}">
+        <h1 ng-if="field.spec.extraOptions.extraInfo">{{field.spec.extraOptions.extraInfo}}</h1>
             <input
             fr-validation
             validation="field.validation"
