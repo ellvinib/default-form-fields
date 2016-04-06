@@ -87,7 +87,7 @@ module.exports = function (grunt) {
           }
         },
         cwd: 'src',
-        src: 'templates/**.html',
+        src: 'templates/{,*/}*.html',
         dest: '<%= yeoman.dist %>/scripts/templates.js'
       }
     },

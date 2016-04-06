@@ -99,6 +99,11 @@
 })(window.angular, window._);;angular.module('defaultFields').run(['$templateCache', function($templateCache) {
   'use strict';
 
+  $templateCache.put('templates/options/tinkText.html',
+    "<form ng-if=ctrl.openItem.item>  <div class=form-group> <label for=question>Question</label> <textarea ng-change=ctrl.rerender() ng-model-options=\"{ updateOn: 'blur' }\" id=question ng-model=\"{{ field.field }}\" placeholder=question rows=2></textarea> </div>  <div class=form-group> <label for=placeholder>placeholder</label> <input ng-change=ctrl.rerender() ng-model-options=\"{ updateOn: 'blur' }\" ng-model=\"{{ field.placeholder }}\" id=placeholder> </div>  <div class=form-group> <label for=description>Description</label> <textarea ng-change=ctrl.rerender() ng-model-options=\"{ updateOn: 'blur' }\" ng-model=\"{{ field.shortDescription }}\" id=description placeholder=description rows=2></textarea> </div>  <div class=form-group> <label for=extraInfo>Extra information</label> <textarea ng-change=ctrl.rerender() ng-model-options=\"{ updateOn: 'blur' }\" ng-model=\"{{ field.extraInfo }}\" id=extraInfo placeholder=extraInfo rows=2></textarea> </div>  <div class=checkbox> <input ng-change=ctrl.rerender() ng-model-options=\"{ updateOn: 'blur' }\" ng-model=\"{{ field.shortDescription }}\" type=checkbox id=Required name=Required checked> <label for=Required>Required</label> </div>  <div class=form-group> <input ng-change=ctrl.rerender() ng-model-options=\"{ updateOn: 'blur' }\" ng-model=\"{{ field.extraOptions.extraInfo }}\" id=extra name=extra> <label for=extra>extra</label> </div> </form>"
+  );
+
+
   $templateCache.put('templates/tinkText.html',
     "<div class=fr-field-state-read-wrapper data-ng-show=!field.state.editMode> {{ngModelInit}} {{field.to.unit}}\n" +
     "<a data-ng-click=field.toggleEditMode() data-ng-if=field.state.showEditButton href=\"\">wijzigen</a> </div> <div class=fr-field-state-write-wrapper data-ng-show=field.state.editMode> <div data-ng-class=\"{'fr-field-input-group': field.to.unit}\"> <input fr-validation validation=field.validation id=\"{{ field.attrs.id }}\" name=\"{{ field.attrs.name }}\" class=fr-control data-ng-model=ngModel placeholder=\"{{ field.attrs.placeholder }}\" data-ng-disabled=\"field.state.disabled\">\n" +
