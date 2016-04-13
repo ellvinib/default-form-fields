@@ -12,7 +12,8 @@
           getFields:function(){
               return [
                   "fieldTypeText",
-                  "tinkDropdownField"
+                  "tinkDropdownField",
+                  "fieldTypeLabel"
               ]
           },
           getWrappers:function(){
@@ -25,55 +26,4 @@
           }
       }
   }])
-  
- /*module.run([
-      'frFieldConfig',
-      'defaultFieldTypes',
-      'defaultTinkWrappers',
-      function run(frFieldConfig, defaultFieldTypes,defaultTinkWrappers) {
-          // initialize default form types and wrappers
-          frFieldConfig.setType(defaultFieldTypes.get());
-          frFieldConfig.setTempWrapper(defaultTinkWrappers.get());
-      }
-  ]);
-    module.service('defaultFieldTypes', [
-        'fieldTypeText',
-        function frFieldTypesService(fieldTypeText) {
-
-            var types = [];
-            var thisArguments = arguments;
-            
-           
-            function initializeTypes() {
-                _.forEach(thisArguments, function(type, index) {
-                    // first item === frFieldConfig
-                    
-                    types.push(type);
-                });
-                return types;
-            }
-
-            return {
-                get: initializeTypes
-            };
-        }
-    ]);
-        module.service('defaultTinkWrappers', [
-            function frWrappersService() {
-
-                function initializeWrappers() {
-                    return [
-                        {
-                            name: 'tinkFieldWrapper',
-                            templateUrl: 'templates/tinkWrapper.html',
-                        }
-                    ];
-                }
-
-                return {
-                    get: initializeWrappers
-                };
-            }
-        ]);*/
-
 })(window.angular, window._);
